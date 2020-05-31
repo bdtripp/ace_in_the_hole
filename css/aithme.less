@@ -1,0 +1,906 @@
+/**************************
+          MIXINS
+***************************/
+
+.form_style() {
+    form {
+        max-width: 360px;
+        margin: 20px auto 30px auto;
+        box-shadow: 5px 5px 20px #AAA;
+        border: 1px solid #DDD;
+        padding: 30px 9%;
+        background-color: white;
+
+        div {
+            margin: 10px 0;
+
+            label, span.placeholder {
+                width: 47%;
+                display: inline-block;
+                text-align: right;
+                vertical-align: top;
+                margin: 0 1% 0 0;
+                
+                &.textarea_label {
+                    width: 94%;
+                    text-align: left;
+                    margin: 10px auto;
+                    display: block;
+                }
+            }
+
+            input, select {
+                width: 48%;
+                display: inline-block;
+                border: 1px solid black;
+            }
+            
+            div {
+                
+                &.radio_group_container {
+                    width: 48%;
+                    display: inline-block;
+                    margin: 0;
+                    
+                    div {
+               
+                        &.radio_container {
+                            margin: 0 0 10px 0;
+
+                            input {
+
+                                &.radio_btn {
+                                    width: auto;
+                                    display: inline;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+            textarea {
+                border: 1px solid black;
+                width: 94%;
+                height: 200px;
+                margin: 0 auto;
+                display: block;
+                
+                &.accomodations_textarea {
+                    height: 100px;
+                }
+            }
+            
+            p {
+                
+                &.success_message {
+                    color: green;
+                    text-align: center;
+                }
+            }
+        }
+
+        input {
+            margin: 0 auto;
+            display: block;
+        }
+    }
+}
+
+/**************************
+       MOBILE STYLE
+***************************/
+
+h2, h3, h4 {
+    text-align: center;
+}
+
+p {
+    width: 93%;
+    margin: 0 auto;
+    padding: 10px 0 0 0;
+    line-height: 1.4rem;
+    
+    &:last-child {
+        padding: 0 0 10px 0;
+    }
+    
+    &:only-of-type {
+        padding: 10px 0 10px 0;
+    }
+}
+
+img {
+    height: auto;
+    max-width: 100%;    
+}
+
+sup {
+  vertical-align: super;
+  font-size: smaller;
+}
+
+.clear {
+    clear: both;
+}
+
+.hide_in_mobile {
+    display: none;
+}
+
+.show_in_mobile {
+    display: block;
+}
+
+.anchor {
+    display:block;
+    visibility:hidden;
+    height: 62px; 
+    margin-top: -62px;
+}
+       
+.error_message_span {
+    text-align: center;
+    color: red;
+    display: block;
+    padding: 5px;
+    border: 1px red solid;
+    background-color: #ffe5e5;
+    margin: 5px;
+}
+
+.required_mark {
+    color: red;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.bottom_space {
+    margin-bottom: 5px;
+}
+
+.center {
+    text-align: center;
+}
+
+&.card {
+    border: 1px solid #DDD;
+    background-color: white;
+    margin: 0 auto 20px auto;
+    border-radius: 5px;
+    width: 96%;
+    box-shadow: 5px 5px 20px #AAA;
+
+    &:first-of-type {
+        margin-top: 10px;
+    }
+
+    h5 {
+        font-weight: bold;
+        margin-top: 10px;
+        border-bottom: 1px solid #DDD;
+        padding-bottom: 10px;
+    }
+}
+
+html {
+    font-family: 'Roboto', arial, sans-serif;
+    scroll-behavior: smooth;
+    
+    body {
+        
+        header {
+            box-shadow: 2px 2px 2px #777;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1;
+            
+            h1 {
+                padding: 12px 0 12px 1%;
+                font-size: 1.2rem;
+                background-color: red;
+                color: white;
+                font-weight: bold;
+                letter-spacing: 1px;
+            }
+            
+            nav {
+                background-color: white;
+                
+                ul {
+                    width: 94%;
+                    margin: 0 auto;
+                    
+                    li {
+                        text-align: center;
+                        border-radius: 5px;
+                        margin: 15px 0;
+                        
+                        &.active {
+                            background-color: #DDD;
+                        }
+                        
+                        a {
+                            text-decoration: none;
+                            font-size: 1.5rem;
+                            color: black;
+                            display: block;
+                            padding: 6px 0;
+                            margin: 1px 0;
+                        }
+                    }
+                }
+            }
+        }
+        
+        main {
+            margin-top: 62px;
+            
+            article {
+                .form_style();
+                
+                h2 {
+                    font-size: 1.8rem;
+                    padding: 18px 0 0 0;
+                }
+                
+                h3 {
+                    font-size: 1.6rem;
+                    padding: 16px 0 0 0 ;
+                }
+                
+                section {
+                    .form_style();
+                    margin: 20px 0 0 0;
+                    
+                    h4 {
+                        font-size: 1.4rem;
+                        padding: 10px 0;
+                        background-color: black;
+                        color: white;
+                    }
+                    
+                    h5 {
+                        font-size: 1.2rem;
+                        text-align: center;
+                    }
+                    
+                    h6 {
+                        text-align: center;
+                        font-size: 1.1rem;
+                        margin: 10px 0 2px 0;
+                    }
+                    
+                    p {
+                        
+                        &.note {
+                            background-color: lightyellow;
+                            border: 1px solid yellow;
+                            padding: 10px 3%;
+                            margin: 10px auto;
+                            width: 88%;
+                            border-radius: 5px;
+                        }
+                        
+                        &.distance {
+                            text-align: center;
+                            margin: 0 auto;
+                            padding: 0;
+                        }
+                        
+                        &.question {
+                            font-weight: bold;
+                        }
+                        
+                        &.address, &.hours {
+                            width: 150px;
+                            margin: 0 auto;
+                        }
+                    }
+                    
+                    div {
+                        
+                        &.courses_container {
+                            
+                            p {
+                                
+                                &:last-of-type {
+                                    padding: 10px 0;
+                                }
+                            }
+                            
+                            h6 {
+                                
+                            }
+                        }
+                        
+                        &.packet_pickup {
+                            max-width: 300px;
+                        }
+                    }
+                    
+                    ul {
+                        width: 72%;
+                        margin: 0 auto;
+                        list-style-type: disc;
+                        
+                        li {
+                            margin: 10px 0;
+                        }
+                    }
+                    
+                    table {
+                        margin: 20px auto;
+                        border: 1px solid black;
+                        border-collapse: collapse;
+                        width: 95%;
+                        background-color: white;
+                        max-width: 310px;
+
+                        tr {
+                            padding: 5px;
+                            
+                        }
+                        
+                        th {
+                            padding: 5px 20px;
+                            vertical-align: middle;
+                            border: 1px solid black;
+                            font-weight: bold;
+                        }
+                        
+                        td {
+                            padding: 5px 20px;
+                            vertical-align: middle;
+                            border: 1px solid black;
+                        }
+ 
+                        &.registration_fees, &.event_schedule {
+                            
+
+                            tr {
+
+                                &:nth-child(even) {
+                                    background-color: #DDD;
+                                }
+                            }
+                        }
+                        
+                        &.registration_fees {
+                                
+                            td {
+
+                                &:nth-child(even) {
+                                    width: 5%;  
+                                } 
+                            }
+                        }
+                        
+                        &.event_schedule {
+                                
+                            td {
+
+                                &:nth-child(even) {
+                                    width: 36%;  
+                                } 
+                            }
+                        }
+                        
+                        &.hours {
+                            max-width: 225px;
+                            
+                            td {
+                                
+                                &:nth-child(odd) {
+                                    font-weight: bold;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+            aside {
+                
+                section {
+                    margin-top: 20px;
+                    border: 1px solid #AAA;
+                    
+                    &:nth-child(2) {
+                        background-color: #EEE;
+                    }
+                }
+                
+                div {
+                    
+                    &.fb-page {
+                        
+                        span {
+                            margin: 0 auto;
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+        
+        footer {
+            text-align: center;
+            background-color: red;
+            color: white;
+            font-size: 1.1rem;
+            line-height: 120%;
+            letter-spacing: .5px;
+            
+            ul {
+                padding-top: 15px;
+                
+                li {
+                    display: inline;
+                    
+                    a {
+                        padding: 0 1.2%;
+                    }
+                }
+            }
+            
+            p {
+                padding: 10px 0;
+            }
+        }
+    }
+}
+
+/**************************
+       TABLET STYLE
+***************************/
+
+@media (min-width: 600px) {
+    
+    img {
+        margin-top: 107px;
+    }
+    
+    .hide_in_mobile {
+        display: block;
+    }
+    
+    .show_in_mobile {
+        display: none;
+    }
+    
+    .anchor {
+       height: 101px; 
+       margin-top: -101px;
+    }
+    
+    html {
+    
+        body {
+
+            header {
+                position: fixed;
+                width: 100%;
+                z-index: 1;
+                background-color: white;
+
+                h1 {
+                    font-size: 1.5rem;
+                    padding: 20px 2%; 
+                    border-bottom: 1px solid black;
+                }
+
+                nav {
+
+                    ul {
+                        width: 100%;
+                        position: relative;
+                        z-index: 1;
+                        background-color: white;
+
+                        li {
+                            width: 25%;
+                            margin: 0;
+
+                            &.active {
+
+                            }
+
+                            a {
+
+                            }
+                        }
+                    }
+                }
+            }
+
+            main {
+                position: relative;
+                overflow: hidden;
+                clear: both;
+                margin-top: 0;
+                
+                div {
+                    
+                    &.left_col_container {
+                        width: 67%;
+                        float: right;
+                        
+                        article {
+                            
+                            &:first-of-type {
+                                position:relative;
+                            }
+
+                            h2 {
+                                padding: 40px 0 10px 0;
+                            }
+
+                            h3 {
+                                padding: 35px 0 10px 0;
+                            }
+                            
+                            img {
+                                
+                                &.left_slide_btn, &.right_slide_btn {
+                                    position: absolute;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    margin-top: 0;
+                                    opacity: .7;
+                                    
+                                    &:hover {
+                                        opacity: 1;
+                                    }
+                                }
+                                
+                                &.left_slide_btn {
+                                    left: 5px;
+                                }
+                                
+                                &.right_slide_btn {
+                                    right: 5px;
+                                }
+                            }
+
+                            section {
+
+
+                                h4 {
+                                    
+                                }
+                                
+                                div {
+                                    
+                                    &.cost_includes {
+                                        margin: 20px auto;
+                                    }
+                                }
+
+                                table {
+                                    
+                                    &.registration_fees {
+                                        
+                                    }
+
+                                    tr {
+
+
+                                        th {
+
+                                        }
+
+                                        td {
+
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                
+                aside {
+                    width: 33%;
+                    position: fixed;
+                    top: 107px;
+                    left: 0;
+                    overflow-y: scroll;
+                    max-height: 500px;
+
+                    section {
+
+                    }
+
+                    section:first-of-type {
+                        margin-top: 0;
+                    }
+                }
+            }
+                
+            footer {
+                clear: both;
+                position: relative;
+                z-index: 1;
+                
+                ul {
+                    padding: 0;
+                
+                    li {
+                        float: right;
+                        padding: 15px 10px 13px 0;
+
+                        a {
+                            
+                            img{
+                                margin: 0;
+                            }
+                        }
+                    }
+                }
+
+                p {
+                    &:only-of-type {
+                        padding: 30px 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/**************************
+       700PX AND UP STYLE
+***************************/
+
+@media (min-width: 700px) {
+    
+    html {
+    
+        body {
+
+            header {
+
+                h1 {
+
+                }
+
+                nav {
+
+                    ul {
+
+                        li {
+
+                            &.active {
+
+                            }
+
+                            a {
+
+                            }
+                        }
+                    }
+                }
+            }
+
+            main {
+
+                article {
+
+                    h2 {
+
+                    }
+
+                    h3 {
+
+                    }
+
+                    section {
+
+                        h4 {
+
+                        }
+                        
+                        div {
+                            
+                            &.cost_includes {
+                                width: 70%;
+                            }
+                        }
+
+                        table {
+                            
+                            &.registration_fees {
+                                width: 70%;
+                            }
+
+                            tr {
+                            
+
+                                th {
+                              
+                                }
+
+                                td {
+                                  
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            footer {
+               
+                ul {
+                
+                    li {
+                   
+
+                        a {
+                           
+                        }
+                    }
+                }
+
+                p {
+                    
+                }
+            }
+        }
+    }
+}
+
+/**************************
+       DESKTOP STYLE
+***************************/
+
+@media (min-width: 1000px) {
+        
+    .float_left {
+        float: left;
+    }
+    
+    .two_col {
+        width: 48%;
+        margin-left: 2%;
+    }
+    
+    html {
+    
+        body {
+
+            header {
+
+                h1 {
+
+                }
+
+                nav {
+
+                    ul {
+
+                        li {
+
+                            &.active {
+
+                            }
+
+                            a {
+
+                            }
+                        }
+                    }
+                }
+            }
+
+            main {
+
+                article {
+
+                    h2 {
+
+                    }
+
+                    h3 {
+
+                    }
+                    
+                    div {
+                        
+                        &.mission {
+                            width: 80%;
+                        }
+                    }
+
+                    section{
+
+                        h4 {
+                            margin-bottom: 10px;
+                        }
+                        
+                        div {
+                            
+                            &.about, {
+                                width: 80%;
+                                
+                                p {
+                                    
+                                    &:last-of-type {
+                                        padding: 10px 0;
+                                    }
+                                }
+                            }
+                            
+                            &.column_container {
+                                -webkit-column-count: 2; /* Chrome, Safari, Opera */
+                                -moz-column-count: 2; /* Firefox */
+                                column-count: 2;
+                                -webkit-column-gap: 0; /* Chrome, Safari, Opera */
+                                -moz-column-gap: 0; /* Firefox */
+                                column-gap: 0;
+                                
+                                div {
+                                    
+                                    &:first-child {
+                                        margin-top: 0;
+                                    }
+                                    
+                                    &.card {
+                                        -webkit-column-break-inside: avoid; /* Chrome, Safari */
+                                        page-break-inside: avoid;           /* Theoretically FF 20+ */
+                                        break-inside: avoid-column;         /* IE 11 */
+                                    }
+                                }
+                            }
+                            
+                            &.cost_includes, &.packet_pickup {
+                                width: 48%;
+                            }
+                        }
+
+                        table {
+                            
+                            &.registration_fees {
+                                width: 48%;
+                            }
+
+                            tr {
+                            
+
+                                th {
+                              
+                                }
+
+                                td {
+                                  
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            footer {
+               
+                ul {
+                
+                    li {
+                   
+
+                        a {
+                           
+                        }
+                    }
+                }
+
+                p {
+                    
+                }
+            }
+        }
+    }
+}
