@@ -7,16 +7,16 @@
  */
 
 //online version
-//const DB_SERVER = '127.0.0.1';
-//const DB_USER = 'bdtrippc';
-//const DB_PASSWORD = 'qIHICCAdcfUr9GuoLnOp';
-//const DB_DATABASE = 'bdtrippc_aithme';
+const DB_SERVER = '127.0.0.1';
+const DB_USER = 'bdtripp';
+const DB_PASSWORD = 'qIHICCAdcfUr9GuoLnOp';
+const DB_DATABASE = 'bdtripp_aithme';
 
 //offline version
-const DB_SERVER = 'localhost';
-const DB_USER = 'aithme';
-const DB_PASSWORD = 'xKP31jwQLDmstZTHfKrl';
-const DB_DATABASE = 'aithme';
+//const DB_SERVER = 'localhost';
+//const DB_USER = 'aithme';
+//const DB_PASSWORD = 'xKP31jwQLDmstZTHfKrl';
+//const DB_DATABASE = 'aithme';
 
 function getPostValue($name) {
     if(isset($_POST[$name])) {
