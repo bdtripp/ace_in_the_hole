@@ -9,7 +9,7 @@
 //online version
 const DB_SERVER = '127.0.0.1';
 const DB_USER = 'bdtripp';
-const DB_PASSWORD = 'qIHICCAdcfUr9GuoLnOp';
+const DB_PASSWORD = 'zCRZDvZJVf8cUym';
 const DB_DATABASE = 'bdtripp_aithme';
 
 //offline version
