@@ -82,7 +82,7 @@ var init = function () {
         var gender;
         var age;
         var eventName;
-        var accommodations
+        var accommodations;
         var xhr = new XMLHttpRequest();
         
         // local versions
@@ -191,6 +191,12 @@ var init = function () {
             var sundayEventDropdown = document.getElementById("sunday_event_name_register");
             var saturdaySelectedEvent = saturdayEventDropdown.options[saturdayEventDropdown.selectedIndex].value;
             var sundaySelectedEvent = sundayEventDropdown.options[sundayEventDropdown.selectedIndex].value;
+            var ageField = document.getElementById("age_register");
+            var age = parseInt(ageField.value);
+            var emailField = document.getElementById("email_register");
+            var email = emailField.value;
+            var phoneField = document.getElementById("emergency_contact_phone_register");
+            var phoneNumber = phoneField.value;
 
             if ((saturdaySelectedEvent === "" && sundaySelectedEvent === "") && (saturdayEventDropdown.className.includes("required") || sundayEventDropdown.className.includes("required"))) {
                 errorMessageSpan = document.createElement("span");
@@ -232,6 +238,31 @@ var init = function () {
                     valid = false;
                 }
             }
+
+            if(!Number.isInteger(age) || age < 1 || age > 130) {
+                errorMessageSpan = document.createElement("span");
+                errorMessageSpan.innerText = "Please enter a valid age (ex: 54)";
+                errorMessageSpan.className = "error_message_span";
+                ageField.parentNode.appendChild(errorMessageSpan);
+                valid = false;
+            }
+
+            if(!validateEmail(email)) {
+                errorMessageSpan = document.createElement("span");
+                errorMessageSpan.innerText = "Please enter a valid email address";
+                errorMessageSpan.className = "error_message_span";
+                emailField.parentNode.appendChild(errorMessageSpan);
+                valid = false;
+            }
+
+            if(!validatePhone(phoneNumber)) {
+                errorMessageSpan = document.createElement("span");
+                errorMessageSpan.innerText = "Please enter a valid phone number";
+                errorMessageSpan.className = "error_message_span";
+                phoneField.parentNode.appendChild(errorMessageSpan);
+                valid = false;
+            }
+
             return valid;
         }
 
@@ -239,6 +270,8 @@ var init = function () {
             var radioChecked = false;
             var relationRadios = document.getElementsByName("relation_contact");
             var relationGroupContainer = relationRadios[0].parentNode.parentNode;
+            var emailField = document.getElementById("email_contact");
+            var email = emailField.value;
             
             if(relationGroupContainer.className.includes("required")) {
                 for(i = 0; i < relationRadios.length; i++) {
@@ -254,8 +287,27 @@ var init = function () {
                     valid = false;
                 }
             }
+
+            if(!validateEmail(email)) {
+                errorMessageSpan = document.createElement("span");
+                errorMessageSpan.innerText = "Please enter a valid email address";
+                errorMessageSpan.className = "error_message_span";
+                emailField.parentNode.appendChild(errorMessageSpan);
+                valid = false;
+            }
         }
+
         return valid;
+    }
+
+    function validateEmail(email) {
+        const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(email).toLowerCase());
+    }
+
+    function validatePhone(number) {
+        const re = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
+        return re.test(String(number));
     }
     
     function adjustForFixedHeader() {
@@ -271,29 +323,30 @@ var init = function () {
     function hideNavMenu() {
         document.getElementById("menu-btn").checked = false;
     }
-    
-    function adjustFbFeed(firstRender) {
-        var aside = document.getElementsByTagName("aside")[0];
-        var asideStyle = document.defaultView.getComputedStyle(aside);
-        var fbFeed = document.getElementsByClassName("fb-page")[0];
-        var fbIframe = fbFeed.getElementsByTagName("iframe")[0];
-        var scrollBarWidth = aside.offsetWidth - aside.clientWidth;
-        
-        if(navigator.userAgent.toLowerCase().includes("firefox")) {
-            fbFeed.dataset.width = (Math.floor(parseFloat(asideStyle.width)) - scrollBarWidth - 2) + "px";
-            console.log("firefox");
-        } else {
-            fbFeed.dataset.width = (Math.floor(parseFloat(asideStyle.width)) - 2) + "px";
-            console.log("other");
-        }
-//        fbIframe.style.width = (Math.floor(parseFloat(asideStyle.width)) - 1) + "px";
 
-        FB.XFBML.parse();
-        console.log("fb parse");
-        //fbFeed.dataset.height = 500 + "px";
-//        console.log(asideStyle.width);
-        
-    }
+//Removied FB feed
+//     function adjustFbFeed(firstRender) {
+//         var aside = document.getElementsByTagName("aside")[0];
+//         var asideStyle = document.defaultView.getComputedStyle(aside);
+//         var fbFeed = document.getElementsByClassName("fb-page")[0];
+//         var fbIframe = fbFeed.getElementsByTagName("iframe")[0];
+//         var scrollBarWidth = aside.offsetWidth - aside.clientWidth;
+//
+//         if(navigator.userAgent.toLowerCase().includes("firefox")) {
+//             fbFeed.dataset.width = (Math.floor(parseFloat(asideStyle.width)) - scrollBarWidth - 2) + "px";
+//             console.log("firefox");
+//         } else {
+//             fbFeed.dataset.width = (Math.floor(parseFloat(asideStyle.width)) - 2) + "px";
+//             console.log("other");
+//         }
+// //        fbIframe.style.width = (Math.floor(parseFloat(asideStyle.width)) - 1) + "px";
+//
+//         FB.XFBML.parse();
+//         console.log("fb parse");
+//         //fbFeed.dataset.height = 500 + "px";
+// //        console.log(asideStyle.width);
+//
+//     }
 
     return function () {
         var registrationForm = document.getElementById("registration_form");
@@ -306,13 +359,14 @@ var init = function () {
 
         adjustAsideHeight();
         adjustForFixedHeader();
-        adjustFbFeed();
-        FB.Event.subscribe('xfbml.render', function() {
-            if(firstRender) {
-                adjustFbFeed();
-            }
-            firstRender = false;
-        });
+        //Removed FB feed
+        // adjustFbFeed();
+        // FB.Event.subscribe('xfbml.render', function() {
+        //     if(firstRender) {
+        //         adjustFbFeed();
+        //     }
+        //     firstRender = false;
+        // });
         window.addEventListener("resize", function() {
             adjustAsideHeight();
             adjustForFixedHeader();
@@ -321,7 +375,7 @@ var init = function () {
                 clearTimeout(timeout);
             }
             timeout = setTimeout(function() {
-                adjustFbFeed();
+                // adjustFbFeed();
             }, 100);
         });
         window.addEventListener("scroll", adjustAsideHeight);
