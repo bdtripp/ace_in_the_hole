@@ -1,3 +1,5 @@
+# Ace in the Hole Multisport Events
+
 This website was developed to promote sporting events and manage registration for athletes and volunteers.  
 
 Visit the site at http://bdtripp.com/ace_in_the_hole/  
@@ -46,12 +48,12 @@ Code Highlights and Website Functionality:
     - Registration for event is inserted to the database when all validation is successful. 
         - Go to template/includes/form_processing.php???  line ???
     - Message “You have successfully registered” is displayed.
-    - Contact Form:
-        - Field Validation
-            - All fields on form are required
-            - Email address must be a valid format -@-.com
-        - Where does the contact message go?
-        - Your message has been sent!  
+- Contact Form:
+  	- Field Validation
+		- All fields on form are required
+		- Email address must be a valid format -@-.com
+	- Where does the contact message go?
+	- Your message has been sent!  
 
 Note:  If this was a real site, there would be additional edits on name and different edits on phone number.  
 
