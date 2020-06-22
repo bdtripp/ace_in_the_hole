@@ -24,7 +24,7 @@ Code Highlights and Website Functionality:
 - Registration: 
     - Registration form for athletes and volunteers
     - Event drop-down list of events
-        - Go to index.php lines 258 - 281 and includes/form_processing.php and 164 - 172
+        - Go to index.php lines 258 - 281 and includes/form_processing.php lines 164 - 172
     - Field Validation using JavaScript
         - All fields on form are required except Special Accommodations Needed
         - Phone number must be a valid format 
