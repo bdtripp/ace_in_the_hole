@@ -6,15 +6,15 @@ require_once("includes/form_processing.php");
 <!DOCTYPE html>
 <html lang="en">
     <head>
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-135450898-2"></script>
-		<script>
-		  window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments);}
-		  gtag('js', new Date());
+								<!-- Global site tag (gtag.js) - Google Analytics -->
+								<script async src="https://www.googletagmanager.com/gtag/js?id=UA-135450898-2"></script>
+								<script>
+										window.dataLayer = window.dataLayer || [];
+										function gtag(){dataLayer.push(arguments);}
+										gtag('js', new Date());
 
-		  gtag('config', 'UA-135450898-2');
-		</script>
+										gtag('config', 'UA-135450898-2');
+								</script>
 
         <title>Ace in the Hole Multisport Events</title>
         <meta charset="utf-8">
