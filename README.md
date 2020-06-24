@@ -54,7 +54,7 @@ Code Highlights and Website Functionality:
 		- Go to includes/form_processing.php  lines 138 - 144
 	- Message "Your message has been sent!" is displayed  
 
-Note:  If this was a real site, there would be additional input validation on name and different edits on phone number.  
+Note:  If this was a real site, there would be additional input validation on name and phone number.  
 
 - Responsive Design using LESS
     - Go to css/aithme.less
