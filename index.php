@@ -53,7 +53,7 @@ require_once("includes/form_processing.php");
                 </article>
                     <span class="anchor" id="upcoming_events"></span>
                 <article>
-                    <h2>Upcoming Events</h2>
+                    <h2 id="upcoming_events">Upcoming Events</h2>
                     <h3>Annual Ace in the Hole Multisport Weekend</h3>
                     <section>
                         <h4>About the Event</h4>
