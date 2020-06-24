@@ -55,7 +55,7 @@ require_once("includes/form_processing.php");
                 <article>
                     <h2>Upcoming Events</h2>
                     <h3>Annual Ace in the Hole Multisport Weekend</h3>
-                    <section>
+                    <section id="about">
                         <h4>About the Event</h4>
                         <div class="about card">
                             <p>The Annual Ace in the Hole Multisport Weekend is a legendary event in the Oregon triathlon and running community. It has become a traditional destination race for athletes from across the nation. </p>
