@@ -7,9 +7,9 @@ Visit the site at http://bdtripp.com/ace_in_the_hole/
 Code Highlights and Website Functionality:  
 
 - Weather feed  
-    - Go to index.php     lines 409 - 414  
+    - Go to index.php     lines 432 - 437  
 - Social Media
-    - Go to index.php     lines 420 - 422
+    - Go to index.php     lines 443 - 445
 - Photo slides using JavaScript
     - Go to image_slider.js
 - Information about the events include: 
@@ -24,7 +24,7 @@ Code Highlights and Website Functionality:
 - Registration: 
     - Registration form for athletes and volunteers
     - Event drop-down list of events
-        - Go to index.php lines 258 - 281 and includes/form_processing.php lines 164 - 172
+        - Go to index.php lines 281 - 304 and includes/form_processing.php lines 164 - 172
     - Field Validation using JavaScript
         - All fields on form are required except Special Accommodations Needed
         - Phone number must be a valid format 
