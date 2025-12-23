@@ -34,6 +34,7 @@ require_once("includes/form_processing.php");
         <script src="aithme.js"></script>
         <script src="image_slider.js"></script>
     </head>
+    
     <body>
         <!-- Google Tag Manager (noscript) -->
         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5XF983C"
@@ -41,7 +42,8 @@ require_once("includes/form_processing.php");
         <!-- End Google Tag Manager (noscript) -->
         
         <div id="fb-root"></div>
-        <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v24.0&appId=APP_ID"></script>
+
         <?php include 'includes/header.php'; ?>
         <main>
             <div class="left_col_container">
@@ -440,9 +442,11 @@ require_once("includes/form_processing.php");
                     <div class="fb-page" data-href="https://www.facebook.com/cas222cascade/" data-tabs="timeline" data-width="500" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/cas222cascade/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/cas222cascade/">CAS 222</a></blockquote></div>
                 </section>
 -->
+
                 <section>
                     <!-- <a class="twitter-timeline" data-height="500" href="https://twitter.com/pcccas222?ref_src=twsrc%5Etfw">Tweets by pcccas222</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>  -->
-                    <a class="twitter-timeline" href="https://twitter.com/RunningOnX?ref_src=twsrc%5Etfw">Tweets by RunningOnX</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+                    <img class="route" src="images/route.jpg"></img>
+                    <img class="route" src="images/route2.png"></img>
                 </section>
                 
             </aside>
