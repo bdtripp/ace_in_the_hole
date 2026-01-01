@@ -1,5 +1,5 @@
 var createSlider = function() {
-    var images = ["bike1.jpg", "run1.jpg", "bike3.jpg", "swim1.jpg", "bike5.jpg", "run4.jpg", "run5.jpg", "swim2.jpg", "run6.jpg", "run7.jpg", "bike4.jpg", "run9.jpg", "run10.jpg"];
+    var images = ["bike1.jpg", "bike2.jpg", "bike3.jpg", "swim1.jpg", "swim2.jpg", "swim3.jpg", "run1.jpg", "run2.jpg", "run3.jpg"];
     var currentImage = 0;
     
     function switchImage(imageTag, path, direction) {
