@@ -25,6 +25,10 @@ img {
   height: auto;
   max-width: 100%;
 }
+figcaption {
+  margin: 0 0 10px 10px;
+  text-align: center;
+}
 sup {
   vertical-align: super;
   font-size: smaller;
@@ -382,7 +386,16 @@ html body footer ul li {
   display: inline;
 }
 html body footer ul li a {
-  padding: 0 1.2%;
+  display: inline-block;
+  padding: 11.25px;
+  border-radius: 5px;
+  line-height: 0;
+}
+html body footer ul li a#x {
+  background-color: black;
+}
+html body footer ul li a#facebook {
+  background-color: white;
 }
 html body footer p {
   padding: 10px 0;
@@ -391,7 +404,7 @@ html body footer p {
        TABLET STYLE
 ***************************/
 @media (min-width: 600px) {
-  img:not(.route) {
+  img#slideshow {
     margin-top: 107px;
   }
   .hide_in_mobile {
@@ -486,7 +499,7 @@ html body footer p {
   }
   html body footer ul li {
     float: right;
-    padding: 15px 10px 13px 0;
+    padding: 7px 10px 13px 0;
   }
   html body footer ul li a img {
     margin: 0;

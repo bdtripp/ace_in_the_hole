@@ -115,6 +115,11 @@ img {
     max-width: 100%;    
 }
 
+figcaption {
+    margin: 0 0 10px 10px;
+    text-align: center;
+}
+
 sup {
   vertical-align: super;
   font-size: smaller;
@@ -449,7 +454,18 @@ html {
                     display: inline;
                     
                     a {
-                        padding: 0 1.2%;
+                        display: inline-block;
+                        padding: 11.25px;
+                        border-radius: 5px;
+                        line-height: 0;
+
+                        &#x {
+                            background-color: black;    
+                        }
+
+                        &#facebook {
+                            background-color: white;    
+                        }
                     }
                 }
             }
@@ -467,7 +483,7 @@ html {
 
 @media (min-width: 600px) {
     
-    img:not(.route) {
+    img#slideshow {
         margin-top: 107px;
     }
     
@@ -638,7 +654,7 @@ html {
                 
                     li {
                         float: right;
-                        padding: 15px 10px 13px 0;
+                        padding: 7px 10px 13px 0;
 
                         a {
                             
@@ -831,13 +847,13 @@ html {
                         
                         div {
                             
-                            &.about, {
+                            &.about {
                                 width: 80%;
                                 
                                 p {
                                     
                                     &:last-of-type {
-                                        padding: 10px 0;
+                                        padding: 10px 0
                                     }
                                 }
                             }

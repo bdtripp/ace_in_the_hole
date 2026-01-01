@@ -445,8 +445,15 @@ require_once("includes/form_processing.php");
 
                 <section>
                     <!-- <a class="twitter-timeline" data-height="500" href="https://twitter.com/pcccas222?ref_src=twsrc%5Etfw">Tweets by pcccas222</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>  -->
-                    <img class="route" src="images/route.jpg"></img>
-                    <img class="route" src="images/route2.png"></img>
+                    
+                    <figure>
+                        <img class="route" src="images/event/eastwood-5k.png"></img>
+                        <figcaption>© OpenStreetMap contributors. Open Database License (ODbL). <a href="https://www.openstreetmap.org/copyright" target="_blank">openstreetmap.org/copyright</a></figcaption>
+                    </figure>   
+                    <figure>
+                        <img class="route" src="images/event/oak-ridge-10k.png"></img>
+                        <figcaption>© OpenStreetMap contributors. Open Database License (ODbL). <a href="www.openstreetmap.org/copyright" target="_blank">openstreetmap.org/copyright</a></figcaption>
+                    </figure>  
                 </section>
                 
             </aside>
